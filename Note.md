@@ -38,7 +38,7 @@ How does it work?
 
 What does it do - Applys a function to iterable data
 
-> Format - map(function_name, sequence)
+``` Format - map(function_name, sequence)```
 
 - function_name: any function (built-in or selfmade) 
 - sequence: any iterable data type
@@ -53,7 +53,7 @@ square_array = list(map(square, array)
   
 What does it do - Filters out items from a data set that meets a certain condion (condition is True)
 
-> Format: filter(bool_returning_function, sequence)
+``` Format: filter(bool_returning_function, sequence)```
 
 - function: The function name we provide for filter() must be return a boolean value ... should also be able handle the items inside the sequence as its arguments
 - sequence: any iterable data type
@@ -73,7 +73,7 @@ odds = list(filter(isOdd, array)
 
 Tuple is a new data type! They're sliceable, indexable and iterable
 
-> Format: (item, item...) - because of this format tuple comprehension uses round brackets
+``` Format: (item, item...) - because of this format tuple comprehension uses round brackets```
 
 Examples:
 ```python
