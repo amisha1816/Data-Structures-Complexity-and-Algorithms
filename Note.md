@@ -199,4 +199,57 @@ print('Is set1 proper superset of set4?:', set1 > set4)
 
 ```Superset``` → Same as proper superset except it can equal to B and uses >= symbol
 
-> two sets are considered disjointed when they share no common value.
+*two sets are considered disjointed when they share no common value.
+
+---
+
+#### ✏️ Dictionary
+
+A data type that stores a collection of (key, value) pairs, such that each possible key appears at most once in the collection.
+
+```python
+Format: {
+    item: item,
+    item: item,
+ }
+```
+
+__Keys__
+Are a unique address for a dictionary value’s location
+
+Properties: 
+- Must be immutable (strings, numbers, tuples, frozenset)
+- Unique; therefore, two same key values cannot exist in a single dictionary - NEWEST CREATED ITEM with a duplicate KEY superceeds the previous declaration (replaces)
+
+__Values__
+A dictionary within a key can be any data type.
+
+```python
+
+sammy = {
+    'username': 'sammy',
+    'online': True,
+    'followers': 42
+}
+
+sammy['followers'] += 10 # We are adding 10 to the value located at key: 'followers'
+sammy['verified'] = True # We added a new value at a new key: 'verified'
+sammy['username'] = 'SammySammy'
+
+print('Sammy Dict:', sammy)
+
+# output - Sammy Dict: {'username': 'SammySammy', 'online': True, 'followers': 52, 'verified': True}
+```
+
+Dictionary Methods
+- A.keys() → Returns a sequence of keys/addresses in A
+- A.values() → Returns a sequence of item values in A
+- A.items() → Returns a sequence of key,item pairs in A
+- A.get(address) → Returns the item value at address
+- A.update(B) → Extends A with the dictionary of key,value pairs of B
+- dict() → allows us to turn other data ypes into dictionaries
+
+__Iterating a Dictionary__
+keys → ```for k in sammy.keys()```
+values → ```for v in sammy.values():```
+items → ```for k, v in sammy.items():```
