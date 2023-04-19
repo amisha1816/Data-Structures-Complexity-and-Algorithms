@@ -110,7 +110,7 @@ e.g. fib_n = (1, 2, 3, 5, 8)
 
 #### ✏️ Sets
 
-Sets is a new data type. It's iterable, mutable, but not indexable or sliceable.
+Sets is a new data type. It's iterable, mutable, but not indexable or sliceable. Sets don't have an order (or an order of insertion), sets can't gurantee that their values will be in order. Due to all this, sets don't record a value's position.
 
 What is it?
 - an unordered collection with no duplicate elements
@@ -125,17 +125,18 @@ Membership
 - By using membership operator, we can be certain a target exists or does not exist in our data
 
 Operators
-- ```Union``` → joins two sets ```result = set1 | set2```
-- ```Intersection``` → returns members that exist in both sets
+```Union``` → joins two sets ```result = set1 | set2```
+```Intersection``` → returns members that exist in both sets
 
 ```python
 set1 = set('hello')
 set2 = set('world')
 
-result = set1 & set2 #uses & symbol
+result = set1 & set2
+# uses '&' symbol
 ```
 
-- ```Difference``` → members that only exist in the first set not the second
+```Difference``` → members that only exist in the first set not the second
 
 ```python
 set1 = set('hello')
@@ -143,14 +144,59 @@ set2 = set('world')
 
 result = set1 - set2 
 
-#uses & symbol
+# uses - symbol
 # output = {'e', 'h'}
 ```
 
+```Symmetric Difference``` → members that exist in one or the other set, but not both
 
+```python
+set1 = set('hello')
+set2 = set('world')
 
-- Symmetric Difference
-- Proper Subset
-- Subset
-- Proper Superset
-- Superset
+result = set1 ^ set2 
+
+# uses ^ symbol
+# output = {'e', 'h', 'w', 'd', 'r'}
+```
+
+```Proper Subset``` → a boolean operator that says A is proper subset of B if all members of A are found in B, but A cannot be exactly the same as B
+
+```python
+set1 = {1, 2, 3}
+set2 = {1, 2, 3, 4)
+set3 = {1, 2, 3}
+set4 = set('hello')
+
+print('Is set1 proper subset of set2?:', set1 < set2) # < is the proper subset operator
+print('Is set1 proper subset of set3?:', set1 < set3)
+print('Is set1 proper subset of set4?:', set1 < set4)
+
+# Is set1 proper subset of set2?: True
+# Is set1 proper subset of set3?: False
+# Is set1 proper subset of set4?: False
+# uses < symbol
+```
+
+```Subset``` → Same as proper subset except it can equal to B and uses <= symbol
+``` Proper Superset``` → a boolean operator that says A is a proper superset of B if A has all the values of B and more, but they are not equal to each other
+
+```python
+# Superset Example:
+set1 = {1,2,3,4}
+set2 = {1,2,3,4}
+set3 = {1,2,3}
+set4 = set('hello')
+
+print('Is set1 proper superset of set2?:', set1 > set2) # > is the proper superset operator
+print('Is set1 proper superset of set3?:', set1 > set3)
+print('Is set1 proper superset of set4?:', set1 > set4)
+
+# Is set1 proper superset of set2?: False
+# Is set1 proper superset of set3?: True
+# Is set1 proper superset of set4?: False
+```
+
+```Superset``` → Same as proper superset except it can equal to B and uses >= symbol
+
+> two sets are considered disjointed when they share no common value.
