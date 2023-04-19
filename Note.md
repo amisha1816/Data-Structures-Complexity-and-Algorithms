@@ -104,4 +104,53 @@ fib = (0, 1, 1, 2, 3, 5, 8)
 fib_0, fib_1, fib_n = fib[0], fib[1], fib[2:]
 e.g. fib_0 = 0
 e.g. fib_n = (1, 2, 3, 5, 8)
+```
 
+---
+
+#### ✏️ Sets
+
+Sets is a new data type. It's iterable, mutable, but not indexable or sliceable.
+
+What is it?
+- an unordered collection with no duplicate elements
+- a mathematical way to describe collection of different unique objects
+- by following the operations and characteristics of the mathematical set, we can utilizie such data structure 
+
+``` Format: {item, item...}```
+
+Membership
+- A set has no duplicates
+- A set’s membership operation is one of the fastest operations compared to strings, lists, or tuples
+- By using membership operator, we can be certain a target exists or does not exist in our data
+
+Operators
+- ```Union``` → joins two sets ```result = set1 | set2```
+- ```Intersection``` → returns members that exist in both sets
+
+```python
+set1 = set('hello')
+set2 = set('world')
+
+result = set1 & set2 #uses & symbol
+```
+
+- ```Difference``` → members that only exist in the first set not the second
+
+```python
+set1 = set('hello')
+set2 = set('world')
+
+result = set1 - set2 
+
+#uses & symbol
+# output = {'e', 'h'}
+```
+
+
+
+- Symmetric Difference
+- Proper Subset
+- Subset
+- Proper Superset
+- Superset
